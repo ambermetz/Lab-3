@@ -1,0 +1,121 @@
+body {
+  display: grid;
+  position: relative;
+  height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+  position: absolute;
+  grid-template-columns: auto;
+  grid-template-rows: 100px auto auto auto auto auto;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  background: palevioletred;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  grid-row: 2;
+}
+
+.image {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.truck-img {
+  width: 100%;
+}
+
+.company-name {
+  font-family: "Sofia", cursive;
+  grid-row-start: 1;
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.book-truck {
+  grid-row: 3;
+  background: #dffaff;
+}
+
+.schedule-truck {
+  grid-row: 4;
+  background: #fdfaff;
+}
+
+.find-truck {
+  grid-row: 5;
+  background: #ffecfb;
+}
+
+.box {
+  padding: 30px 10px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background: palevioletred;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 756px) {
+  .grid-container {
+    display: grid;
+    position: absolute;
+    grid-template-areas:
+      "header header header "
+      "main main right"
+      "box1 box2 box3"
+      "footer footer footer";
+    grid-gap: 10px;
+  }
+
+  header {
+    grid-area: header;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+
+  .book-truck {
+    grid-area: box1;
+  }
+
+  .schedule-truck {
+    grid-area: box2;
+  }
+
+  .find-truck {
+    grid-area: box3;
+  }
+
+  footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    font-family: "Sofia", cursive;
+    font-size: 18px;
+    color: white;
+    text-shadow: 2px 2px 2px #000;
+  }
+}
