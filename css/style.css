@@ -21,13 +21,21 @@ header {
   align-items: center;
 }
 
-h2 {
+h2,
+h1 {
   display: flex;
   justify-content: center;
+  font-family: "Sofia", cursive;
+}
+
+h1 {
+  font-size: 40px;
 }
 
 main {
   grid-row: 2;
+  display: flex;
+  flex-direction: column;
 }
 
 .image {
@@ -49,9 +57,31 @@ main {
   text-shadow: 2px 2px 2px #000;
 }
 
+.contact-us-button {
+  background: rgb(93, 149, 208);
+  color: white;
+  width: 25%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 20px;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
 .book-truck {
   grid-row: 3;
   background: #dffaff;
+}
+
+.book-truck-button {
+  background: rgb(93, 149, 208);
+  color: white;
+  width: 25%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 20px;
+  padding: 10px 0;
+  font-size: 16px;
 }
 
 .schedule-truck {
@@ -64,8 +94,13 @@ main {
   background: #ffecfb;
 }
 
+.map {
+  height: 100px;
+  width: 100px;
+}
+
 .box {
-  padding: 30px 10px;
+  padding: 0px 10px 10px 10px;
   margin-bottom: 10px;
 }
 
@@ -75,17 +110,21 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Sofia", cursive;
+  font-size: 18px;
+  color: white;
+  text-shadow: 2px 2px 2px #000;
 }
 
 @media only screen and (min-width: 756px) {
   .grid-container {
     display: grid;
-    position: absolute;
     grid-template-areas:
-      "header header header "
-      "main main right"
-      "box1 box2 box3"
-      "footer footer footer";
+      "header header"
+      "main right"
+      "box1 box2"
+      "footer footer";
+    grid-template-columns: auto;
     grid-gap: 10px;
   }
 
@@ -96,8 +135,18 @@ footer {
     padding-left: 20px;
   }
 
+  .main-content {
+    padding-top: 50px;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+  }
+
   .book-truck {
     grid-area: box1;
+    margin-top: 10px;
   }
 
   .schedule-truck {
@@ -113,9 +162,5 @@ footer {
     display: flex;
     justify-content: flex-start;
     padding-left: 20px;
-    font-family: "Sofia", cursive;
-    font-size: 18px;
-    color: white;
-    text-shadow: 2px 2px 2px #000;
   }
 }
